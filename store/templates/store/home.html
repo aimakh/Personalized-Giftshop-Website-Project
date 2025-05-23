@@ -1,0 +1,32 @@
+
+{% extends 'store/base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Hero Section -->
+<div class="hero" style="background-image: url('{% static 'store/images/hero.jpg' %}'); background-size: cover; background-position: center; height: 80vh;">
+    <div class="d-flex justify-content-center align-items-center h-100 overlay">
+        <h1 class="text-white display-4 text-shadow">Welcome to Serene & Sentiments</h1>
+    </div>
+</div>
+
+<!-- Explore Our Products Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4 section-title">Explore Our Products</h2>
+    <div class="text-center">
+        <a href="{% url 'product_list' %}" class="btn btn-primary btn-lg custom-btn">View Products</a>
+    </div>
+</div>
+
+
+ <!-- Deal of the Day -->
+<div class="container my-5">
+    <div class="p-4 rounded-4 shadow-lg text-center" style="background: linear-gradient(135deg,rgb(249, 182, 182), #ffccd9); border: 2px dashed #ff4d88;">
+        <h2 class="fw-bold mb-3 text-dark">Deal of the Day</h2>
+        <h4 class="text-danger fw-bold">Buy 2 Get 1 Free!</h4>
+        <p class="text-muted">Celebrate every moment with more surprises! Grab this special offer on selected items today only.</p>
+        <a href="{% url 'product_list' %}" class="btn btn-outline-danger btn-lg mt-3">Shop the Deal</a>
+    </div>
+</div>
+
+{% endblock %}
